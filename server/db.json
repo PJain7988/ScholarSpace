@@ -1,0 +1,154 @@
+{
+  "notes": [
+    {
+      "id": 1779550214659,
+      "title": "Untitled Note",
+      "content": "",
+      "color": "blue",
+      "category": "General",
+      "createdAt": "2026-05-23T15:30:14.659Z",
+      "updatedAt": "2026-05-23T15:30:14.659Z"
+    },
+    {
+      "id": 1779379232407,
+      "title": "Untitled Note",
+      "content": "",
+      "color": "blue",
+      "category": "General",
+      "createdAt": "2026-05-21T16:00:32.407Z",
+      "updatedAt": "2026-05-21T16:00:32.408Z"
+    },
+    {
+      "id": 1779379301738,
+      "title": "# Advanced CS Thesis Outline",
+      "content": "# Core Features\n- [x] Background sync API\n- [ ] Database storage\n\n> Focus is the key to research success.",
+      "color": "blue",
+      "category": "General",
+      "createdAt": "2026-05-21T16:01:41.738Z",
+      "updatedAt": "2026-05-21T16:02:20.403Z"
+    },
+    {
+      "id": 1779379389260,
+      "title": "# Advanced CS Thesis Outline",
+      "content": "# Core Features\n- [x] Background sync API\n- [ ] Database storage\n\n> Focus is the key to research success.",
+      "color": "blue",
+      "category": "General",
+      "createdAt": "2026-05-21T16:03:09.260Z",
+      "updatedAt": "2026-05-21T16:03:37.690Z"
+    },
+    {
+      "id": 1779547924798,
+      "title": "Untitled Note",
+      "content": "",
+      "color": "blue",
+      "category": "General",
+      "createdAt": "2026-05-23T14:52:04.798Z",
+      "updatedAt": "2026-05-23T14:52:04.798Z"
+    }
+  ],
+  "todos": [
+    {
+      "id": 1779446530438,
+      "text": "ABC",
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium",
+      "category": "General",
+      "dueDate": null,
+      "createdAt": "2026-05-22T10:42:10.438Z"
+    },
+    {
+      "id": 1779446211228,
+      "text": "abc",
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium",
+      "category": "General",
+      "dueDate": null,
+      "createdAt": "2026-05-22T10:36:51.228Z"
+    },
+    {
+      "id": 1779380577753,
+      "text": "Design CSS glassmorphic widgets",
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium",
+      "category": "General",
+      "dueDate": null,
+      "createdAt": "2026-05-21T16:22:57.753Z",
+      "notes": "Designed global custom themes module. Built custom low-pass Web Audio noise filtering chimes simulator. Successfully tested offline."
+    },
+    {
+      "id": 1779380464887,
+      "text": "Priya Jain",
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium",
+      "category": "General",
+      "dueDate": null,
+      "createdAt": "2026-05-21T16:21:04.887Z",
+      "completed": false
+    },
+    {
+      "id": 1779379817197,
+      "text": "dfgh",
+      "status": "in-progress",
+      "progress": 85,
+      "priority": "medium",
+      "category": "General",
+      "dueDate": null,
+      "createdAt": "2026-05-21T16:10:17.197Z",
+      "completed": false
+    },
+    {
+      "id": 1779379643333,
+      "text": "Design CSS glassmorphic widgets",
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium",
+      "category": "General",
+      "dueDate": null,
+      "createdAt": "2026-05-21T16:07:23.333Z",
+      "completed": true
+    },
+    {
+      "id": 1779379626739,
+      "text": "Design CSS glassmorphic widgets",
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium",
+      "category": "General",
+      "dueDate": null,
+      "createdAt": "2026-05-21T16:07:06.739Z"
+    },
+    {
+      "id": 1779379250394,
+      "text": "create a ppt",
+      "completed": false,
+      "priority": "low",
+      "category": "General",
+      "dueDate": null,
+      "createdAt": "2026-05-21T16:00:50.394Z"
+    },
+    {
+      "id": 1779379478388,
+      "text": "Revise Chapter 1 Proposal",
+      "completed": false,
+      "priority": "high",
+      "category": "General",
+      "dueDate": "2026-06-15",
+      "createdAt": "2026-05-21T16:04:38.388Z"
+    },
+    {
+      "id": 1779548065985,
+      "text": "Code SQLite persistence layer",
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium",
+      "category": "General",
+      "dueDate": null,
+      "createdAt": "2026-05-23T14:54:25.985Z",
+      "notes": "vxifdgj kd\ncgh"
+    }
+  ]
+}

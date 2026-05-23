@@ -1,0 +1,801 @@
+/* TodoApp.css - Professional Academic Planner Styling */
+
+.todo-container {
+  padding: 40px 48px;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+.todo-header {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.todo-header p {
+  color: #94a3b8;
+  font-size: 15px;
+  margin: 0;
+}
+
+.progress-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-title {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.progress-percentage {
+  color: #8b5cf6;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+  border-radius: 10px;
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+/* Workflow stat pills in header */
+.workflow-stats-pills {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.workflow-pill {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.workflow-pill.pending { background: rgba(148, 163, 184, 0.08); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.12); }
+.workflow-pill.in-progress { background: rgba(234, 179, 8, 0.08); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.12); }
+.workflow-pill.completed { background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.12); }
+
+.progress-celebration {
+  margin-top: 4px;
+  color: #10b981;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Advanced Task Creation Form */
+.advanced-todo-form {
+  background: rgba(30, 41, 59, 0.25);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-main-row {
+  display: flex;
+  gap: 16px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 14px 20px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+  color: #f1f5f9;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.todo-input::placeholder {
+  color: #475569;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  background: rgba(15, 23, 42, 0.6);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.add-todo-btn {
+  padding: 0 24px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+  transition: all 0.2s ease;
+}
+
+.add-todo-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(139, 92, 246, 0.3);
+}
+
+.form-settings-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 13px;
+}
+
+.setting-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.setting-group label {
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.priority-selectors {
+  display: flex;
+  background: rgba(15, 23, 42, 0.4);
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.prio-pill {
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prio-pill.low { color: #22c55e; }
+.prio-pill.medium { color: #eab308; }
+.prio-pill.high { color: #ef4444; }
+
+.prio-pill.active {
+  color: white;
+}
+.prio-pill.low.active { background-color: #22c55e; }
+.prio-pill.medium.active { background-color: #eab308; }
+.prio-pill.high.active { background-color: #ef4444; }
+
+.task-select {
+  padding: 6px 12px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 8px;
+  color: #e2e8f0;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.date-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.calendar-icon {
+  position: absolute;
+  left: 10px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.task-date-input {
+  padding: 6px 10px 6px 30px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 8px;
+  color: #e2e8f0;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+/* Filters & Search bar styling */
+.todo-filters-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  width: 250px;
+}
+
+.search-box-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+}
+
+.search-box-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 10px;
+  color: #cbd5e1;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-box-input:focus {
+  border-color: #8b5cf6;
+  background: rgba(30, 41, 59, 0.5);
+}
+
+.filters-selectors {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.select-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: #64748b;
+}
+
+.filter-select {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.filter-select option {
+  background: #1e293b;
+  color: #cbd5e1;
+}
+
+/* Tasks Render List */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  background: rgba(30, 41, 59, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.06);
+  border-radius: 16px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 4px solid transparent;
+}
+
+.todo-item:hover {
+  background: rgba(30, 41, 59, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Priority Card Indicators */
+.todo-item.prio-high { border-left-color: #ef4444; }
+.todo-item.prio-medium { border-left-color: #eab308; }
+.todo-item.prio-low { border-left-color: #22c55e; }
+
+/* Completed Tasks gray out */
+.todo-item.completed {
+  opacity: 0.85;
+}
+
+/* Custom Workflow Status Trigger */
+.task-status-trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  margin-top: 2px;
+}
+
+.task-status-trigger:hover {
+  transform: scale(1.15);
+}
+
+.status-icon.pending {
+  color: #94a3b8;
+}
+
+.status-icon.in-progress {
+  color: #eab308;
+  animation: rotation 4s linear infinite;
+}
+
+@keyframes rotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.status-icon.completed {
+  color: #10b981;
+  filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.4));
+}
+
+.todo-content-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.todo-text {
+  color: #f8fafc;
+  font-size: 15px;
+  font-weight: 600;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.todo-item.completed .todo-text {
+  color: #475569;
+  text-decoration: line-through;
+}
+
+/* Visual Progress Slider styling */
+.todo-progress-controller {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(15, 23, 42, 0.2);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.04);
+}
+
+.slider-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-percentage-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.status-badge {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+.status-badge.pending { background: rgba(148, 163, 184, 0.08); color: #94a3b8; }
+.status-badge.in-progress { background: rgba(234, 179, 8, 0.12); color: #eab308; }
+.status-badge.completed { background: rgba(16, 185, 129, 0.12); color: #10b981; }
+
+.slider-wrapper-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-progress-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 1;
+  height: 4px;
+  background: rgba(148, 163, 184, 0.15);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.task-progress-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(139, 92, 246, 0.6);
+  transition: transform 0.1s ease;
+}
+
+.task-progress-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+}
+
+.individual-progress-bar-bg {
+  width: 60px;
+  height: 4px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.individual-progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+.individual-progress-bar-fill.pending { background-color: #64748b; }
+.individual-progress-bar-fill.in-progress { background-color: #eab308; box-shadow: 0 0 4px #eab308; }
+.individual-progress-bar-fill.completed { background-color: #10b981; box-shadow: 0 0 4px #10b981; }
+
+/* Metadata tag row */
+.todo-metadata-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.prio-tag {
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.prio-tag.high { background: rgba(239, 68, 68, 0.12); color: #f87171; }
+.prio-tag.medium { background: rgba(234, 179, 8, 0.12); color: #facc15; }
+.prio-tag.low { background: rgba(34, 197, 94, 0.12); color: #4ade80; }
+
+.cat-tag, .date-tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #64748b;
+}
+
+/* Timeline status warning tags */
+.date-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.overdue-badge { background: rgba(239, 68, 68, 0.12); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); }
+.today-badge { background: rgba(234, 179, 8, 0.12); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.2); }
+.tomorrow-badge { background: rgba(59, 130, 246, 0.12); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.2); }
+.upcoming-badge { background: rgba(148, 163, 184, 0.1); color: #94a3b8; }
+.done-badge { background: rgba(16, 185, 129, 0.12); color: #10b981; }
+
+.delete-todo-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: -4px;
+}
+
+.todo-item:hover .delete-todo-btn {
+  opacity: 1;
+}
+
+.delete-todo-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* Stats Footer */
+.todo-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 4px;
+  background: rgba(15, 23, 42, 0.4);
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.filter-tab {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.filter-tab:hover {
+  color: #cbd5e1;
+}
+
+.filter-tab.active {
+  color: white;
+  background: #8b5cf6;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+.clear-btn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.clear-btn:hover {
+  color: #f8fafc;
+  background: rgba(148, 163, 184, 0.05);
+}
+
+.empty-todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #475569;
+  text-align: center;
+  gap: 12px;
+}
+
+.empty-todos svg {
+  color: #8b5cf6;
+  opacity: 0.5;
+}
+
+.empty-todos p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .todo-container {
+    padding: 24px;
+  }
+  .form-main-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .form-settings-row {
+    gap: 12px;
+  }
+  .todo-filters-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .todo-stats {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+}
+
+/* Collapsible Task Work Notes styling */
+.task-notes-section {
+  margin-top: 14px;
+  border-top: 1px solid rgba(148, 163, 184, 0.06);
+  padding-top: 12px;
+}
+
+.task-notes-toggle-btn {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 6px;
+  color: #94a3b8;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.task-notes-toggle-btn:hover {
+  background: rgba(30, 41, 59, 0.8);
+  color: #f8fafc;
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.task-notes-toggle-btn.expanded {
+  background: var(--tab-active-bg);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.task-notes-editor-box {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.task-notes-textarea {
+  width: 100%;
+  min-height: 70px;
+  padding: 10px 12px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 13px;
+  font-family: inherit;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.task-notes-textarea:focus {
+  border-color: var(--accent-primary);
+  background: rgba(15, 23, 42, 0.7);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.notes-char-indicator {
+  font-size: 10px;
+  font-weight: 600;
+  color: #64748b;
+  text-align: right;
+}
+
+/* Stylized Goal Work Log Notes Preview Container */
+.goal-notes-preview {
+  margin-top: 4px;
+  margin-bottom: 12px;
+  background: rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  border-radius: 10px;
+  padding: 12px 16px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .goal-notes-preview {
+  background: rgba(241, 245, 249, 0.6) !important;
+  border-color: rgba(148, 163, 184, 0.15) !important;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.goal-notes-preview-header {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.goal-notes-preview-content {
+  font-size: 13.5px;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+body.light-mode .goal-notes-preview-content {
+  color: #334155 !important;
+}
+
