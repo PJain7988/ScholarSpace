@@ -23,6 +23,7 @@ function NoteEditor({ note, colors, onUpdateNote }) {
     setColor(note.color);
     setCategory(note.category || 'General');
     setIsSaved(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [note.id]);
 
   const triggerToast = (msg) => {

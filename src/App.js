@@ -28,8 +28,6 @@ function App() {
   const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard', 'notes', 'todos'
   const [syncStatus, setSyncStatus] = useState('offline'); // 'online', 'syncing', 'offline'
 
-  const [todoStats, setTodoStats] = useState({ pending: 0, inProgress: 0, completed: 0, highPrio: 0 });
-
   const updateTodoStats = () => {
     try {
       const allTodos = JSON.parse(localStorage.getItem('todos') || '[]');
@@ -44,7 +42,6 @@ function App() {
 
         if (t.priority === 'high') stats.highPrio++;
       });
-      setTodoStats(stats);
       setTodos(allTodos);
     } catch (e) {
       console.warn('Failed to parse todo stats:', e);
@@ -224,7 +221,7 @@ function App() {
         : note
     );
     setNotes(updatedNotes);
-    setSelectedNote(id);
+    setSelectedNote(null);
     triggerPushToServer(updatedNotes, todos);
   };
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Plus, Trash2, Calendar, AlertCircle, Tag, Search, Filter, ArrowUpDown, Clock, CheckCircle2, Circle } from 'lucide-react';
 import './TodoApp.css';
 
@@ -127,14 +127,9 @@ const TodoApp = ({
   const sortedAndFiltered = getSortedTodos(filteredTodos);
 
   // Advanced Stats Calculation
-  const totalCount = normalizedTodos.length;
   const pendingCount = normalizedTodos.filter(t => t.status === 'pending').length;
   const inProgressCount = normalizedTodos.filter(t => t.status === 'in-progress').length;
   const completedCount = normalizedTodos.filter(t => t.status === 'completed').length;
-
-  // Weighted Academic Progress: sum of all individual progress metrics / total tasks
-  const totalProgressSum = normalizedTodos.reduce((acc, todo) => acc + (todo.progress || 0), 0);
-  const weightedProgress = totalCount === 0 ? 0 : Math.round(totalProgressSum / totalCount);
 
   // Status icon helpers
   const getStatusIcon = (status) => {

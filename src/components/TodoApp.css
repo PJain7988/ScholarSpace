@@ -3,7 +3,7 @@
 .todo-container {
   padding: 40px 48px;
   width: 100%;
-  max-width: 950px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
