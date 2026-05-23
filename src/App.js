@@ -4,7 +4,7 @@ import NotesList from './components/NotesList';
 import NoteEditor from './components/NoteEditor';
 import TodoApp from './components/TodoApp';
 import Dashboard from './components/Dashboard';
-import { Plus, Search, CheckSquare, BookOpen, LayoutDashboard, Cloud, CloudOff, FolderOpen, ArrowUpDown, Sun, Moon, SlidersHorizontal } from 'lucide-react';
+import { Plus, Search, CheckSquare, BookOpen, LayoutDashboard, FolderOpen, ArrowUpDown, Sun, Moon, SlidersHorizontal } from 'lucide-react';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -26,7 +26,6 @@ function App() {
   
   // Dashboard & Sync States
   const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard', 'notes', 'todos'
-  const [syncStatus, setSyncStatus] = useState('offline'); // 'online', 'syncing', 'offline'
 
   const updateTodoStats = () => {
     try {
@@ -99,7 +98,6 @@ function App() {
 
     const performSync = async () => {
       try {
-        setSyncStatus('syncing');
         // Fetch current server state
         const res = await fetch(BACKEND_URL, {
           method: 'GET',
@@ -159,10 +157,8 @@ function App() {
           body: JSON.stringify({ notes: mergedNotes, todos: mergedTodos })
         });
 
-        setSyncStatus('online');
       } catch (err) {
         // Fall back peacefully to local-first cache mode
-        setSyncStatus('offline');
       }
     };
 
@@ -182,7 +178,7 @@ function App() {
         body: JSON.stringify({ notes: updatedNotes, todos: updatedTodos })
       });
     } catch (e) {
-      setSyncStatus('offline');
+      // Offline fallback
     }
   };
 
@@ -350,43 +346,15 @@ function App() {
   const sortedAndFilteredNotes = getSortedNotes(filteredNotes);
   const currentNote = notes.find(note => note.id === selectedNote);
 
-  // Sync state widget helper
-  const renderSyncWidget = () => {
-    if (syncStatus === 'online') {
-      return (
-        <div className="sync-pill online" title="REST API connected. All data synchronized.">
-          <Cloud size={14} />
-          <span>Sync Active</span>
-        </div>
-      );
-    }
-    if (syncStatus === 'syncing') {
-      return (
-        <div className="sync-pill syncing" title="Syncing workspace details in background...">
-          <div className="spinner"></div>
-          <span>Syncing...</span>
-        </div>
-      );
-    }
-    return (
-      <div className="sync-pill offline" title="API offline. Using high-speed LocalStorage Cache.">
-        <CloudOff size={14} />
-        <span>Local Mode</span>
-      </div>
-    );
-  };
-
   return (
     <div className="app">
       <div className="app-container">
-
         <aside className="sidebar">
           <div className="sidebar-header">
             <div className="app-title">
               <div className="app-icon">🎓</div>
               <h1>ScholarSpace</h1>
             </div>
-            {renderSyncWidget()}
           </div>
 
           <div className="sidebar-theme-tuner">

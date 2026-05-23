@@ -75,6 +75,17 @@
   ],
   "todos": [
     {
+      "id": 1779548065985,
+      "text": "Code SQLite persistence layer",
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium",
+      "category": "General",
+      "dueDate": null,
+      "createdAt": "2026-05-23T14:54:25.985Z",
+      "notes": "Successfully coded SQLite connection pool. Configured write-ahead logging (WAL) for 2x performance. Wrote robust unit tests for all raw SQL statement files."
+    },
+    {
       "id": 1779446530438,
       "text": "ABC",
       "status": "pending",
@@ -97,14 +108,13 @@
     {
       "id": 1779380577753,
       "text": "Design CSS glassmorphic widgets",
-      "status": "in-progress",
-      "progress": 5,
+      "status": "pending",
+      "progress": 0,
       "priority": "medium",
       "category": "General",
       "dueDate": null,
       "createdAt": "2026-05-21T16:22:57.753Z",
-      "notes": "Designed global custom themes module. Built custom low-pass Web Audio noise filtering chimes simulator. Successfully tested offline.",
-      "completed": false
+      "notes": "Designed global custom themes module. Built custom low-pass Web Audio noise filtering chimes simulator. Successfully tested offline."
     },
     {
       "id": 1779380464887,
@@ -166,17 +176,6 @@
       "category": "General",
       "dueDate": "2026-06-15",
       "createdAt": "2026-05-21T16:04:38.388Z"
-    },
-    {
-      "id": 1779548065985,
-      "text": "Code SQLite persistence layer",
-      "status": "pending",
-      "progress": 0,
-      "priority": "medium",
-      "category": "General",
-      "dueDate": null,
-      "createdAt": "2026-05-23T14:54:25.985Z",
-      "notes": "vxifdgj kd\n xkaklter tlkl\ncgh"
     }
   ]
 }
