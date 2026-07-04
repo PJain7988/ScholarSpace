@@ -1,5 +1,7 @@
 # Notes App - React Project
 
+![Screenshot](screenshot.png)
+
 A beautiful, feature-rich note-taking application built with React. Create, edit, delete, and organize your notes with color tags. All notes are automatically saved to your browser's localStorage.
 
 ## Features
