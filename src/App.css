@@ -1,46 +1,56 @@
-/* GLOBAL THEME TOKENS */
+/* GLOBAL THEME TOKENS - PREMIUM DESIGN SYSTEM */
 body {
-  --app-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-  --brand-gradient: linear-gradient(135deg, #60a5fa, #a78bfa);
-  --accent-primary: #8b5cf6;
+  --app-bg: #09090b; /* Deep premium black */
+  --brand-gradient: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  --accent-primary: #818cf8;
   --accent-secondary: #6366f1;
-  --accent-glow: rgba(139, 92, 246, 0.4);
-  --btn-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  --btn-hover-glow: rgba(59, 130, 246, 0.3);
-  --tab-active-bg: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+  --accent-glow: rgba(129, 140, 248, 0.35);
+  --btn-gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
+  --btn-hover-glow: rgba(79, 70, 229, 0.4);
+  --tab-active-bg: rgba(255, 255, 255, 0.08);
+  --panel-bg: rgba(24, 24, 27, 0.65);
+  --panel-border: rgba(255, 255, 255, 0.08);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
 }
 
 body.theme-cyberpunk {
-  --app-bg: linear-gradient(135deg, #0c0a1c 0%, #170d2b 50%, #050409 100%);
-  --brand-gradient: linear-gradient(135deg, #f43f5e, #d946ef);
+  --app-bg: #050505;
+  --brand-gradient: linear-gradient(135deg, #f43f5e, #d946ef, #8b5cf6);
   --accent-primary: #d946ef;
   --accent-secondary: #06b6d4;
-  --accent-glow: rgba(217, 70, 239, 0.4);
-  --btn-gradient: linear-gradient(135deg, #d946ef, #06b6d4);
-  --btn-hover-glow: rgba(217, 70, 239, 0.3);
-  --tab-active-bg: linear-gradient(135deg, rgba(217, 70, 239, 0.25), rgba(6, 182, 212, 0.25));
+  --accent-glow: rgba(217, 70, 239, 0.35);
+  --btn-gradient: linear-gradient(135deg, #e11d48, #c026d3);
+  --btn-hover-glow: rgba(225, 29, 72, 0.4);
+  --tab-active-bg: rgba(217, 70, 239, 0.1);
+  --panel-bg: rgba(10, 10, 10, 0.7);
+  --panel-border: rgba(217, 70, 239, 0.2);
 }
 
 body.theme-emerald {
-  --app-bg: linear-gradient(135deg, #061c15 0%, #0c3629 50%, #030f0a 100%);
-  --brand-gradient: linear-gradient(135deg, #34d399, #059669);
+  --app-bg: #020617;
+  --brand-gradient: linear-gradient(135deg, #34d399, #059669, #047857);
   --accent-primary: #10b981;
   --accent-secondary: #059669;
-  --accent-glow: rgba(16, 185, 129, 0.4);
-  --btn-gradient: linear-gradient(135deg, #10b981, #047857);
-  --btn-hover-glow: rgba(16, 185, 129, 0.3);
-  --tab-active-bg: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
+  --accent-glow: rgba(16, 185, 129, 0.35);
+  --btn-gradient: linear-gradient(135deg, #059669, #047857);
+  --btn-hover-glow: rgba(5, 150, 105, 0.4);
+  --tab-active-bg: rgba(16, 185, 129, 0.1);
+  --panel-bg: rgba(2, 44, 34, 0.4);
+  --panel-border: rgba(16, 185, 129, 0.15);
 }
 
 body.theme-ocean {
-  --app-bg: linear-gradient(135deg, #081a2e 0%, #0a2e5c 50%, #040e1c 100%);
-  --brand-gradient: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  --app-bg: #000000;
+  --brand-gradient: linear-gradient(135deg, #38bdf8, #0ea5e9, #0284c7);
   --accent-primary: #0ea5e9;
   --accent-secondary: #0284c7;
-  --accent-glow: rgba(14, 165, 233, 0.4);
-  --btn-gradient: linear-gradient(135deg, #0ea5e9, #0369a1);
-  --btn-hover-glow: rgba(14, 165, 233, 0.3);
-  --tab-active-bg: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(2, 132, 199, 0.2));
+  --accent-glow: rgba(14, 165, 233, 0.35);
+  --btn-gradient: linear-gradient(135deg, #0284c7, #0369a1);
+  --btn-hover-glow: rgba(2, 132, 199, 0.4);
+  --tab-active-bg: rgba(14, 165, 233, 0.1);
+  --panel-bg: rgba(8, 47, 73, 0.4);
+  --panel-border: rgba(14, 165, 233, 0.15);
 }
 
 .app {
@@ -60,13 +70,15 @@ body.theme-ocean {
   width: 320px;
   height: 100vh;
   max-height: 100vh;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(10px);
-  border-right: 1px solid rgba(148, 163, 184, 0.1);
+  background: var(--panel-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid var(--panel-border);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  animation: slideInRight 0.5s ease-out;
+  animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 1px 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-header {
@@ -102,7 +114,7 @@ body.theme-ocean {
 .create-btn {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   background: var(--btn-gradient);
   color: white;
   border: none;
@@ -110,8 +122,9 @@ body.theme-ocean {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all var(--transition-normal);
   font-weight: 600;
+  box-shadow: var(--shadow-md);
 }
 
 .create-btn:hover {
@@ -141,19 +154,19 @@ body.theme-ocean {
 .search-input {
   width: 100%;
   padding: 10px 16px 10px 40px;
-  background: rgba(30, 41, 59, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  border-radius: 8px;
-  color: #e2e8f0;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  color: var(--text-main);
   font-size: 14px;
-  transition: all 0.3s ease;
+  transition: all var(--transition-normal);
 }
 
 .search-input:focus {
   outline: none;
-  border-color: #3b82f6;
-  background: rgba(30, 41, 59, 1);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: var(--accent-primary);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 4px var(--accent-glow);
 }
 
 .search-and-filter-row {
@@ -383,27 +396,27 @@ body.theme-ocean {
 .app-tab {
   width: 100%;
   padding: 12px 16px;
-  background: rgba(30, 41, 59, 0.2);
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  border-radius: 10px;
-  color: #94a3b8;
-  font-weight: 600;
-  font-size: 13.5px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 14px;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all var(--transition-normal);
 }
 
 .app-tab:hover {
-  background: rgba(30, 41, 59, 0.55);
-  color: #cbd5e1;
-  transform: translateX(2px);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
 }
 
 .app-tab.active {
   background: var(--tab-active-bg);
-  border-color: var(--accent-primary);
+  border-color: var(--panel-border);
   color: #ffffff;
-  box-shadow: 0 4px 12px var(--accent-glow);
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
 }
 
 /* Sidebar Theme Selector styling */
@@ -566,24 +579,24 @@ body.theme-ocean {
 .create-btn-main {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: var(--btn-gradient);
   color: white;
-  border: none;
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
   font-weight: 600;
-  font-size: 13.5px;
+  font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
-  transition: all 0.2s ease;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
 }
 
 .create-btn-main:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(139, 92, 246, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--btn-hover-glow);
 }
 
 .sidebar-filter-group {

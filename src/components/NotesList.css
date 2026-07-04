@@ -24,26 +24,27 @@
 .note-item {
   display: flex;
   gap: 12px;
-  padding: 14px;
-  background: rgba(30, 41, 59, 0.25);
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  border-radius: 12px;
+  padding: 16px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-xl);
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
 }
 
 .note-item:hover {
-  background: rgba(30, 41, 59, 0.5);
-  border-color: rgba(148, 163, 184, 0.18);
-  transform: translateX(2px);
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .note-item.active {
-  background: rgba(139, 92, 246, 0.08);
-  border-color: rgba(139, 92, 246, 0.4);
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+  background: var(--tab-active-bg);
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-lg), 0 0 15px var(--accent-glow);
 }
 
 .note-color-indicator {
@@ -76,9 +77,9 @@
 }
 
 .note-title {
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 600;
-  color: #f8fafc;
+  color: var(--text-main);
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -86,21 +87,21 @@
 }
 
 .note-item.active .note-title {
-  color: #a78bfa;
+  color: var(--accent-primary);
 }
 
 .note-preview {
-  font-size: 12.5px;
-  color: #64748b;
+  font-size: 13px;
+  color: var(--text-muted);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.5;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .note-item:hover .note-preview {
-  color: #94a3b8;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .note-meta-badges {

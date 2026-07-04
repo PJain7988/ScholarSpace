@@ -40,9 +40,9 @@
 .progress-container {
   margin-top: 20px;
   padding: 20px;
-  background: rgba(30, 41, 59, 0.3);
-  border: 1px solid rgba(148, 163, 184, 0.1);
-  border-radius: 18px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-2xl);
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
@@ -113,10 +113,10 @@
 
 /* Advanced Task Creation Form */
 .advanced-todo-form {
-  background: rgba(30, 41, 59, 0.25);
+  background: var(--panel-bg);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  border-radius: 20px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-2xl);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -154,18 +154,18 @@
 
 .add-todo-btn {
   padding: 0 24px;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: var(--btn-gradient);
   color: white;
-  border: none;
-  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
-  transition: all 0.2s ease;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
 }
 
 .add-todo-btn:hover {
@@ -348,18 +348,19 @@
   align-items: flex-start;
   gap: 16px;
   padding: 20px 24px;
-  background: rgba(30, 41, 59, 0.15);
+  background: var(--panel-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(148, 163, 184, 0.06);
-  border-radius: 16px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-normal);
   border-left: 4px solid transparent;
 }
 
 .todo-item:hover {
-  background: rgba(30, 41, 59, 0.3);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Priority Card Indicators */

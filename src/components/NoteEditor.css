@@ -5,8 +5,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.4), rgba(30, 41, 59, 0.2));
-  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+  animation: popIn var(--transition-normal);
   position: relative;
 }
 
@@ -31,9 +31,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px 32px;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  border-bottom: 1px solid var(--panel-border);
   gap: 24px;
-  background: rgba(15, 23, 42, 0.15);
+  background: var(--panel-bg);
 }
 
 .header-left {
@@ -45,23 +45,23 @@
 }
 
 .note-title-input {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-display);
   font-size: 26px;
   font-weight: 700;
   background: transparent;
   border: none;
-  color: #f8fafc;
+  color: var(--text-main);
   outline: none;
   word-break: break-word;
-  transition: all 0.2s ease;
+  transition: all var(--transition-normal);
 }
 
 .note-title-input::placeholder {
-  color: #475569;
+  color: var(--text-muted);
 }
 
 .note-title-input:focus {
-  color: #8b5cf6;
+  color: var(--accent-primary);
 }
 
 .note-meta-row {
@@ -321,8 +321,8 @@
   padding: 32px;
   background: transparent;
   border: none;
-  color: #e2e8f0;
-  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.7;
   outline: none;
